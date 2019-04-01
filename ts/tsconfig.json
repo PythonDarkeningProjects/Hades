@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "outDir": "../js",
+        "removeComments": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@services/*": ["services/*"],
+            "@database/*": ["database/*"]
+        }
+    }
+}

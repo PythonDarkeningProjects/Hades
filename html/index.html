@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Jquery CDN (to load HTML pages) -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ 
+  </head>
+  <body>
+
+    <!-- Load the Sign-In form -->
+    <div id="index-sign-in">
+        <script type="text/javascript">
+          $("#index-sign-in").load("./sign-in/sign-in.html #div-sign-in-modal");
+        </script>
+      </div>    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Auth -->
+    <script>
+      function getDatafromDB(username, password) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              // response from DB
+              let data = JSON.parse(this.responseText)[0];
+              //console.log("username from database = " + data.password);
+              console.log(`username from database: ${data.username}`);
+              console.log(`password from database: ${data.password}`);
+              if(data.username == username && data.password == password){
+                // Reference: https://www.geeksforgeeks.org/open-a-link-without-clicking-on-it-using-javascript
+                window.open("http://localhost:3000/dashboard/main", "_top");                   
+              }
+              else{
+                console.log("incorrect username or password!");
+              }
+          }};
+          // Specifies the type of request
+          xhttp.open("POST", "http://localhost:3000/auth", true);
+          // Send the proper header information along with the request
+          xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+          // Sends the request to the server (used for POST)
+          // Params must be in GET format like: param1=value&param2=value
+          xhttp.send(`username=${username}&password=${password}`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- Sign-In Modal division => ID(sign-in-modal) -->
+    <div id="div-sign-in-modal">
+      <!-- (container mx-auto) to show a centered form -->
+      <div class="container mx-auto" style="width: 500px;">
+        <!-- Form -->
+        <form id="sign-in-form">
+          <!-- Form Row -->
+          <div class="form-row">
+            <div class="col-md-10 mb-3">
+              <img class="card-img-top" src="images/apple-sign-in.jpg" alt="Sign-In image">
+              <!-- <label for="validationDefault03">Username</label> -->
+              <input type="text" class="form-control border-right-0 border-top-0 border-left-0" id="sign-in-username" placeholder="Username" required>
+            </div>
+          </div>
+          <!-- Form Row -->
+          <div class="form-row">
+            <div class="form-group col-md-10">
+              <!-- <label for="inputPassword4">Password</label> -->
+              <input type="password" class="form-control border-right-0 border-top-0 border-left-0" id="sign-in-password" placeholder="Password" required>
+            </div>
+          </div>
+          <!-- Form Buttons -->
+          <!-- Need an account button -->
+          <button class="shadow rounded btn btn-outline-info" type="button" data-toggle="collapse" data-target="#collapseHelp" aria-expanded="false" aria-controls="collapseExample">Need an account?</button>
+          <div class="collapse" id="collapseHelp">
+            <div class="card-body">Send an email to Administrator</div>
+          </div>
+          <!-- Sign-in button -->
+          <button class="shadow rounded btn btn-outline-success" type="button" 
+          onclick="getDatafromDB(
+            document.getElementById('sign-in-username').value, 
+            document.getElementById('sign-in-password').value
+            )">Sign-In</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
