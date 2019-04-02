@@ -9,6 +9,7 @@
   "author": "<author>",
   "license": "ISC",
   "dependencies": {
+    "@types/jquery": "^3.3.29",
     "@types/module-alias": "^2.0.0",
     "@types/node": "^11.12.0",
     "body-parser": "^1.18.3",
