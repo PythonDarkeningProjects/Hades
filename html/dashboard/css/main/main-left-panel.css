@@ -1,0 +1,10 @@
+/*this is like to create a new class from other*/
+.btn-custom {
+  padding: 5px;
+  width: 250px;
+  margin-top: 4px;
+  /* border: 2px solid; */
+  text-align: justify;
+  text-indent: 50px;
+  font-style: italic;
+}

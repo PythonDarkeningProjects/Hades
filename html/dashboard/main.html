@@ -10,56 +10,30 @@
 
     <!-- Jquery CDN (to load HTML pages) -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  margin: 2px;
-}
-
-/* Column container */
-.row {  
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  flex: 2%;
-  /* background-color: #f1f1f1; */
-  background-color: #F7F7F7;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  padding: 30px;
-}
-
-/* Main column */
-.main {
-  flex: 80%;
-  background-color: white;
-  padding: 60px;
-}
-
-.dashboardHeader{
-  padding: 10px;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row, .navbar {   
-    flex-direction: column;
-  }
-}
-</style>
-
-  </head>
-  <body>
     
+    <!-- Flexbox CSS -->
+    <link rel="stylesheet" href="css/main/main-flexbox.css">
+    <!-- Fill dinamically hover -->
+    <link rel="stylesheet" href="css/buttons/fill-dinamically.css">
+  </head>
+
+  <body >
     <!-- Header -->
+
+    <div class="dashboardHeader">
+      <div class="d-flex justify-content-end">
+        <a href="#" class="cta">
+          <span>Log out</span>
+          <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+
+<!-- 
     <div class="dashboardHeader">
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-outline-info shadow-sm bg-white rounded">
@@ -68,58 +42,22 @@ body {
             </span>Log-out</button>
           </button>
         </div>
-    </div>
+    </div> -->
 
     <!-- The flexible grid (content) -->
     <div class="row">
-      <div class="side">
-        <!-- Card image -->
-        <div style="width: 10rem;">
-          <img style="padding: 2px;max-width: 100%;margin-left: 100px;opacity: 0.9;width: 80px" class="card-img-top" src="../images/userExampleImage.png">
-          <!-- Card body -->
-          <div class="card-body">
-            <button style="margin-left: 80px" type="button" class="btn btn-outline-info border-0">
-              Role
-              <span class="badge badge-light">Admin</span>
-            </button>
-          </div>
-        </div>
-        <!-- Admin Section Button -->
-        <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary shadow bg-white rounded" type="button" data-toggle="collapse" data-target="#adminSection" aria-expanded="false" aria-controls="adminSection">
-          <span class="adminButtonIcon">
-              <img src="../icons/dashboard/database.svg">
-          </span>Admin</button>
-        </button>
-        <!-- Admin Collapse Section -->
-        <div class="collapse" id="adminSection">
-          <div class="nav flex-column nav-pills" id="v-admin-pills-tab" role="tablist" aria-orientation="vertical">
-            <!-- Admin Tabs -->
-            <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-createUser-tab" data-toggle="pill" data-target="#v-pills-createUser" aria-expanded="false" aria-controls="v-pills-createUser">Create a user</button>
-            <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-deleteUser-tab" data-toggle="pill" data-target="#v-pills-deleteUser" aria-expanded="false" aria-controls="v-pills-deleteUser">Delete a user</button>
-            <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-changeUserPassword-tab" data-toggle="pill" data-target="#v-pills-changeUserPassword" aria-expanded="false" aria-controls="v-pills-changeUserPassword">Change user password</button>
-            <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-modifyUserPermissions-tab" data-toggle="pill" data-target="#v-pills-modifyUserPermissions" aria-expanded="false" aria-controls="v-pills-modifyUserPermissions">Modify user permissions</button>
-          </div>
-        </div>
-        <!-- Settings Section Button -->
-        <!-- <br> -->
-        <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-info shadow bg-white rounded" type="button" data-toggle="collapse" data-target="#settingsSection" aria-expanded="false" aria-controls="settingsSection">
-            <span class="settingsButtonIcon">
-                <img src="../icons/dashboard/settings.svg">
-            </span>Settings</button>
-        </button>
-        <!-- Settings Collapse Section -->
-        <div class="collapse" id="settingsSection">
-          <div class="nav flex-column nav-pills" id="v-settings-pills-tab" role="tablist" aria-orientation="vertical">
-            <!-- Settings Tabs -->
-            <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-info border-0 d-flex" type="button" id="v-pills-changeMyPassword-tab" data-toggle="pill" data-target="#v-pills-changeMyPassword" aria-expanded="false" aria-controls="v-pills-changeMyPassword">Change my password</button>
-            <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-info border-0 d-flex" type="button" id="v-pills-seeMyProfile-tab" data-toggle="pill" data-target="#v-pills-seeMyProfile" aria-expanded="false" aria-controls="v-pills-seeMyProfile">See my profile</button>
-          </div>
-        </div>
-
-
+      <!--------------------------->
+      <!---- Side section --------->
+      <!--------------------------->
+      <div class="side" id="dashboard-left-panel">
+        <!-- Load the left panel components -->
+          <script type="text/javascript">
+            $("#dashboard-left-panel").load("./left-panel.html");
+          </script>
       </div>
-
+      <!-------------------------->
       <!-- Main Content Section -->
+      <!-------------------------->
       <div class="main">
         <div class="tab-content" id="v-pills-tabContent">
           <!-- Admin Tabs -->

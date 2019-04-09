@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+  }
+
+  /* Style the body */
+  body {
+    margin: 2px;
+  }
+
+  /* Column container */
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 2%;
+    /* background-color: #f1f1f1; */
+    background-color: #F7F7F7;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px;
+  }
+
+  /* Main column */
+  .main {
+    flex: 80%;
+    background-color: white;
+    padding: 60px;
+  }
+
+  .dashboardHeader{
+    padding: 10px;
+    margin-left: 90%;
+  }
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+
+  }

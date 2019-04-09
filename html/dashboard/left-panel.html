@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Jquery CDN (to load HTML pages) -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <!-- Flexbox CSS (required) -->
+    <link rel="stylesheet" href="css/main/main-flexbox.css">
+    <!-- Left panel CSS (required) -->
+    <link rel="stylesheet" href="css/main/main-left-panel.css">
+    <!-- Fill dinamically hover (pink hover)-->
+    <link rel="stylesheet" href="css/buttons/fill-dinamically.css">
+    <!-- Fill button black hover -->
+    <link rel="stylesheet" href="css/buttons/fill-button-black.css">
+
+  </head>
+
+  <body >
+    <!-- Card image -->
+    <div style="width: 10rem;">
+      <img style="padding: 2px;max-width: 100%;margin-left: 100px;opacity: 0.9;width: 80px" class="card-img-top" src="../images/userExampleImage.png">
+      <!-- Card body -->
+      <div class="card-body">
+        <button style="margin-left: 80px" type="button" class="btn btn-outline-info border-0">
+          Role
+          <span class="badge badge-light">Admin</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Admin button -->
+    <button class="learn-more" type="button"  data-toggle="collapse" data-target="#adminSection" aria-expanded="false" aria-controls="adminSection">
+      <div class="circle">
+        <span class="icon arrow"></span>
+      </div>
+      <p class="button-text">Admin</p>
+    </button>
+    
+    <!-- Admin Collapse Section -->
+    <div class="collapse" id="adminSection">
+      <div class="nav flex-column nav-pills" id="v-admin-pills-tab" role="tablist" aria-orientation="vertical">
+        <!-- Admin Tabs -->
+        <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-createUser-tab" data-toggle="pill" data-target="#v-pills-createUser" aria-expanded="false" aria-controls="v-pills-createUser">Create a user</button>
+        <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-deleteUser-tab" data-toggle="pill" data-target="#v-pills-deleteUser" aria-expanded="false" aria-controls="v-pills-deleteUser">Delete a user</button>
+        <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-changeUserPassword-tab" data-toggle="pill" data-target="#v-pills-changeUserPassword" aria-expanded="false" aria-controls="v-pills-changeUserPassword">Change user password</button>
+        <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-primary border-0 d-flex" type="button" id="v-pills-modifyUserPermissions-tab" data-toggle="pill" data-target="#v-pills-modifyUserPermissions" aria-expanded="false" aria-controls="v-pills-modifyUserPermissions">Modify user permissions</button>
+      </div>
+    </div>
+
+    <!-- Settings Button -->
+    <button class="btn-custom" type="button" data-toggle="collapse" data-target="#settingsSection" aria-expanded="false" aria-controls="settingsSection">
+      <span><img src="../icons/dashboard/settings.svg"></span>
+        Settings
+    </button>
+
+ 
+    <!-- Settings Collapse Section -->
+    <div class="collapse" id="settingsSection">
+      <div class="nav flex-column nav-pills" id="v-settings-pills-tab" role="tablist" aria-orientation="vertical">
+          <!-- Settings Tabs -->
+          <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-info border-0 d-flex" type="button" id="v-pills-changeMyPassword-tab" data-toggle="pill" data-target="#v-pills-changeMyPassword" aria-expanded="false" aria-controls="v-pills-changeMyPassword">Change my password</button>
+          <button style="padding: 5px; width: 250px; margin-top: 4px !important" class="btn btn-outline-info border-0 d-flex" type="button" id="v-pills-seeMyProfile-tab" data-toggle="pill" data-target="#v-pills-seeMyProfile" aria-expanded="false" aria-controls="v-pills-seeMyProfile">See my profile</button>
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
